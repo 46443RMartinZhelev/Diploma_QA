@@ -13,24 +13,15 @@ class TestWebsite:
 
   @pytest.fixture(autouse=True)
   def browser_setup_and_teardown(self):
-    self.use_selenoid = False  # set to True to run tests with Selenoid
-
-    if self.use_selenoid:
-      self.browser = webdriver.Remote(
-        command_executor='http://localhost:4444/wd/hub',
-        desired_capabilities={
-          "browserName": "chrome",
-          "browserSize": "1920x1080"
-        }
-      )
-    else:
-      self.browser = webdriver.Chrome()
+    self.browser = webdriver.Chrome()
 
     self.browser.maximize_window()
     self.browser.implicitly_wait(10)
     self.browser.get("https://www.jetbrains.com/")
 
     yield
+
+
 
     self.browser.close()
     self.browser.quit()
@@ -47,7 +38,7 @@ class TestWebsite:
 
   def test_navigation_to_all_tools(self):
     """this test checks navigation by See All Tools button"""
-    see_all_tools_button = self.browser.find_element(By.CSS_SELECTOR, "a.wt-button_mode_primary")
+    see_all_tools_button = self.browser.find_element(By.XPATH, "//a[contains(text(), 'See all tools')]")
     see_all_tools_button.click()
 
     products_list = self.browser.find_element(By.ID, "products-page")
@@ -59,11 +50,14 @@ class TestWebsite:
     search_button = self.browser.find_element(By.CSS_SELECTOR, "[data-test='site-header-search-action']")
     search_button.click()
 
-    search_field = self.browser.find_element(By.CSS_SELECTOR, "[data-test='search-input']")
+    search_field = self.browser.find_element(By.CSS_SELECTOR, "[data-test='input']")
+    search_field.click()
+    search_field = self.browser.find_element(By.CSS_SELECTOR, "[data-test='input__inner']")
+    search_field.click()
     search_field.send_keys("Selenium")
 
     submit_button = self.browser.find_element(By.CSS_SELECTOR, "button[data-test='full-search-button']")
     submit_button.click()
 
-    search_page_field = self.browser.find_element(By.CSS_SELECTOR, "input[data-test='search-input']")
+    search_page_field = self.browser.find_element(By.CSS_SELECTOR, "input[data-test='input__inner']")
     assert search_page_field.get_property("value") == "Selenium"

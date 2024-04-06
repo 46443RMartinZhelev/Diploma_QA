@@ -50,7 +50,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_tools_menu">
+  <component name="RunManager" selected="Python tests.Selenium Tests">
     <configuration name="Selenium Tests" type="tests" factoryName="py.test">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
