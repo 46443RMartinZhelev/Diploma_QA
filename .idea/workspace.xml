@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="fix failing tests + remove unwanted configuration">
+    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="Add skeleton for further UI tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
@@ -24,6 +24,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "46443RMartinZhelev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b48a3e0c-12ad-4bcd-8f99-71f892bd230c" />
+        <option name="url" value="https://github.com/46443RMartinZhelev/Diploma_QA.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -36,27 +50,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Selenium Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test.TestWebsite.test_register_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test.TestWebsite.test_tools_menu.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Selenium Tests.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_register_user.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_tools_menu.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_register_user">
+}]]></component>
+  <component name="RunManager" selected="Python tests.Selenium Tests">
     <configuration name="Selenium Tests" type="tests" factoryName="py.test">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
@@ -71,6 +86,23 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;--html\u003dreports/test_report.html&quot;" />
       <option name="_new_target" value="&quot;test.TestWebsite&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test.TestWebsite.test_login_user_incorrect_email_password" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Diploma_QA" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestWebsite.test_login_user_incorrect_email_password&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -110,13 +142,14 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_register_user" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_tools_menu" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastUrl" value="https://www.automationexercise.com/signup" />
+    <option name="lastUrl" value="https://www.google.bg/?gws_rd=ssl" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -129,7 +162,7 @@
       <workItem from="1712403187705" duration="151000" />
       <workItem from="1712403348622" duration="338000" />
       <workItem from="1712407757929" duration="4108000" />
-      <workItem from="1712412460209" duration="1625000" />
+      <workItem from="1712412460209" duration="2689000" />
     </task>
     <task id="LOCAL-00001" summary="start - failing tests">
       <option name="closed" value="true" />
@@ -147,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712403611984</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Test Case 1: Register User">
+      <option name="closed" value="true" />
+      <created>1712414134418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712414134418</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +197,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start - failing tests" />
     <MESSAGE value="fix failing tests + remove unwanted configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix failing tests + remove unwanted configuration" />
+    <MESSAGE value="Add Test Case 1: Register User" />
+    <MESSAGE value="Add skeleton for further UI tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add skeleton for further UI tests" />
   </component>
 </project>

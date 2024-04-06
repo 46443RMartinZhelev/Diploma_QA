@@ -183,3 +183,130 @@ class TestWebsite:
     account_deleted_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > section > div >"
                                                                       " div > div > h2 > b").text
     assert account_deleted_text == "ACCOUNT DELETED!"
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_login_user_correct_email_password(self):
+    """Test Case 2: Login User with correct email and password"""
+    # Test case consists of 2 parts: API part for account creation and Selenium for UI testing
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_login_user_incorrect_email_password(self):
+    """Test Case 3: Login User with incorrect email and password"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_logout_user(self):
+    """Test Case 4: Logout User"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_register_user_existing_email(self):
+    """Test Case 5: Register User with existing email"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_contact_form(self):
+    """Test Case 6: Contact Us Form"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_page_verification_test_cases(self):
+    """Test Case 7: Verify Test Cases Page"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_page_verification_all_products_details(self):
+    """Test Case 8: Verify All Products and product detail page"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_search_product(self):
+    """Test Case 9: Search Product"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_verify_subscription_home_page(self):
+    """Test Case 10: Verify Subscription in home page"""
+    pass
+
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_verify_subscription_cart_page(self):
+    """Test Case 11: Verify Subscription in Cart page"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_add_products_to_cart(self):
+    """Test Case 12: Add Products in Cart"""
+    pass
+
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_verify_product_quantity_cart(self):
+    """Test Case 13: Verify Product quantity in Cart"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_place_order_register_checkout_while(self):
+    """Test Case 14: Place Order: Register while Checkout"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_place_order_register_checkout_before(self):
+    """Test Case 15: Place Order: Register before Checkout"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_place_order_login_checkout_before(self):
+    """Test Case 16: Place Order: Login before Checkout"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_remove_products_cart(self):
+    """Test Case 17: Remove Products From Cart"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_view_category_products(self):
+    """Test Case 18: View Category Products"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_view_cart_brand_products(self):
+    """Test Case 19: View & Cart Brand Products"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_search_products_verify_cart_after_login(self):
+    """Test Case 20: Search Products and Verify Cart After Login"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_add_review_product(self):
+    """Test Case 21: Add review on product"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_add_to_cart_recommended_items(self):
+    """Test Case 22: Add to cart from Recommended items"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_verify_address_details_checkout(self):
+    """Test Case 23: Verify address details in checkout page"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_download_invoice_after_purchase(self):
+    """Test Case 24: Download Invoice after purchase order"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_verify_scroll_functionality_using_arrow(self):
+    """Test Case 25: Verify Scroll Up using 'Arrow' button and Scroll Down functionality"""
+    pass
+
+  @pytest.mark.skip(reason="Not implemented yet")
+  def test_verify_scroll_functionality_without_arrow(self):
+    """Test Case 26: Verify Scroll Up without 'Arrow' button and Scroll Down functionality"""
+    pass
