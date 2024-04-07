@@ -430,10 +430,23 @@ class TestWebsite:
         """Test Case 6: Contact Us Form"""
         pass
 
-    @pytest.mark.skip(reason="Not implemented yet")
     def test_page_verification_test_cases(self):
         """Test Case 7: Verify Test Cases Page"""
-        pass
+        # 3. Verify that home page is visible successfully
+        tab_title = self.browser.title
+
+        assert tab_title == "Automation Exercise"
+
+        # 4. Click on 'Test Cases' button
+        test_cases_button = self.browser.find_element(By.CSS_SELECTOR, "html > body > header > div > div > div "
+                                                                       "> div:nth-of-type(2) > div > ul >"
+                                                                       " li:nth-of-type(5) > a")
+        test_cases_button.click()
+
+        # 5. Verify user is navigated to test cases page successfully
+        current_url = self.browser.current_url
+
+        assert "test_cases" in current_url
 
     @pytest.mark.skip(reason="Not implemented yet")
     def test_page_verification_all_products_details(self):
