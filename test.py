@@ -384,10 +384,46 @@ class TestWebsite:
 
         requests.delete("https://automationexercise.com/api/deleteAccount", files=account_delete_details)
 
-    @pytest.mark.skip(reason="Not implemented yet")
-    def test_register_user_existing_email(self):
+    def test_register_user_existing_email(self, account_create_details, account_delete_details):
         """Test Case 5: Register User with existing email"""
-        pass
+        requests.post("https://automationexercise.com/api/createAccount", files=account_create_details)
+
+        # 3. Verify that home page is visible successfully
+        tab_title = self.browser.title
+
+        assert tab_title == "Automation Exercise"
+
+        # 4. Click on 'Signup / Login' button
+        login_button = self.browser.find_element(By.XPATH, "//a[@href='/login']")
+        login_button.click()
+
+        # 5. Verify 'New User Signup!' is visible
+        signup_text = self.browser.find_element(By.CSS_SELECTOR, "div[class='signup-form'] h2").text
+
+        assert signup_text == "New User Signup!"
+
+        # 6. Enter name and already registered email address
+        name = account_create_details.get("name")[1]
+        email = account_create_details.get("email")[1]
+
+        name_input = self.browser.find_element(By.CSS_SELECTOR, "input[data-qa='signup-name']")
+        name_input.click()
+        name_input.send_keys(name)
+
+        email_input = self.browser.find_element(By.CSS_SELECTOR, "input[data-qa='signup-email']")
+        email_input.click()
+        email_input.send_keys(email)
+
+        # 7. Click 'Signup' button
+        signup_button = self.browser.find_element(By.CSS_SELECTOR, "button[data-qa='signup-button']")
+        signup_button.click()
+
+        # 8. Verify error 'Email Address already exist!' is visible
+        error_text = self.browser.find_element(By.CSS_SELECTOR, "form[action='/signup'] p").text
+
+        assert error_text == "Email Address already exist!"
+
+        requests.delete("https://automationexercise.com/api/deleteAccount", files=account_delete_details)
 
     @pytest.mark.skip(reason="Not implemented yet")
     def test_contact_form(self):

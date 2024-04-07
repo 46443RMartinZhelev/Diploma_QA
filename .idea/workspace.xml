@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="added Test Case 2: Login User with correct email and password">
+    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="added Test Case 4: Logout User">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
@@ -58,6 +58,7 @@
     "Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_logout_user.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_register_user.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_register_user_existing_email.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_tools_menu.executor": "Run",
     "Python tests.pytest in test.py.executor": "Run",
     "Python.raw.executor": "Run",
@@ -76,7 +77,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_logout_user">
+  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_register_user_existing_email">
     <configuration name="raw" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
@@ -133,23 +134,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test.TestWebsite.test_login_user_incorrect_email_password" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Diploma_QA" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestWebsite.test_login_user_incorrect_email_password&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for test.TestWebsite.test_logout_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
@@ -164,6 +148,23 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test.TestWebsite.test_logout_user&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test.TestWebsite.test_register_user_existing_email" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Diploma_QA" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestWebsite.test_register_user_existing_email&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -186,16 +187,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test.TestWebsite.test_register_user_existing_email" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_logout_user" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_login_user_correct_email_password" />
         <item itemvalue="Python tests.pytest in test.py" />
         <item itemvalue="Python.raw" />
-        <item itemvalue="Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastUrl" value="https://www.automationexercise.com/login" />
+    <option name="lastUrl" value="https://www.automationexercise.com/signup" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -209,7 +210,8 @@
       <workItem from="1712403348622" duration="338000" />
       <workItem from="1712407757929" duration="4108000" />
       <workItem from="1712412460209" duration="3335000" />
-      <workItem from="1712477407534" duration="5326000" />
+      <workItem from="1712477407534" duration="5939000" />
+      <workItem from="1712491148252" duration="484000" />
     </task>
     <task id="LOCAL-00001" summary="start - failing tests">
       <option name="closed" value="true" />
@@ -259,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712482292748</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added Test Case 4: Logout User">
+      <option name="closed" value="true" />
+      <created>1712482775784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712482775784</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +282,7 @@
     <MESSAGE value="Add skeleton for further UI tests" />
     <MESSAGE value="added test case 3 Login User with incorrect email and password" />
     <MESSAGE value="added Test Case 2: Login User with correct email and password" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Test Case 2: Login User with correct email and password" />
+    <MESSAGE value="added Test Case 4: Logout User" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Test Case 4: Logout User" />
   </component>
 </project>
