@@ -189,10 +189,41 @@ class TestWebsite:
     """Test Case 2: Login User with correct email and password"""
     # Test case consists of 2 parts: API part for account creation and Selenium for UI testing
 
-  @pytest.mark.skip(reason="Not implemented yet")
   def test_login_user_incorrect_email_password(self):
     """Test Case 3: Login User with incorrect email and password"""
-    pass
+
+    # 3. Verify that home page is visible successfully
+    actual_tab_title = self.browser.title
+
+    assert actual_tab_title == "Automation Exercise"
+
+    # 4. Click on 'Signup / Login' button
+    login_button = self.browser.find_element(By.XPATH, "//a[@href='/login']")
+    login_button.click()
+
+    # 5. Verify 'Login to your account' is visible
+    login_text = self.browser.find_element(By.CSS_SELECTOR, "div[class='login-form'] h2").text
+    assert login_text == "Login to your account"
+
+    # 6. Enter incorrect email address and password
+    email = "random123@randomrandom.com"
+    password = "random123"
+
+    email_input = self.browser.find_element(By.CSS_SELECTOR, "input[data-qa='login-email']")
+    email_input.click()
+    email_input.send_keys(email)
+
+    password_input = self.browser.find_element(By.CSS_SELECTOR, "input[data-qa='login-password']")
+    password_input.click()
+    password_input.send_keys(password)
+
+    # 7. Click 'login' button
+    login_button = self.browser.find_element(By.CSS_SELECTOR, "button[data-qa='login-button']")
+    login_button.click()
+
+    # 8. Verify error 'Your email or password is incorrect!' is visible
+    error_text = self.browser.find_element(By.CSS_SELECTOR, "form[action='/login'] p").text
+    assert error_text == "Your email or password is incorrect!"
 
   @pytest.mark.skip(reason="Not implemented yet")
   def test_logout_user(self):
