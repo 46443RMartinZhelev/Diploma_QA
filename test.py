@@ -331,10 +331,58 @@ class TestWebsite:
         error_text = self.browser.find_element(By.CSS_SELECTOR, "form[action='/login'] p").text
         assert error_text == "Your email or password is incorrect!"
 
-    @pytest.mark.skip(reason="Not implemented yet")
-    def test_logout_user(self):
+    def test_logout_user(self, account_create_details, account_delete_details):
         """Test Case 4: Logout User"""
-        pass
+        requests.post("https://automationexercise.com/api/createAccount", files=account_create_details)
+
+        # 3. Verify that home page is visible successfully
+        actual_tab_title = self.browser.title
+
+        assert actual_tab_title == "Automation Exercise"
+
+        # 4. Click on 'Signup / Login' button
+        login_button = self.browser.find_element(By.XPATH, "//a[@href='/login']")
+        login_button.click()
+
+        # 5. Verify 'Login to your account' is visible
+        login_text = self.browser.find_element(By.CSS_SELECTOR, "div[class='login-form'] h2").text
+        assert login_text == "Login to your account"
+
+        # 6. Enter correct email address and password
+        email = account_create_details.get("email")[1]
+        password = account_create_details.get("password")[1]
+
+        email_input = self.browser.find_element(By.CSS_SELECTOR, "input[data-qa='login-email']")
+        email_input.click()
+        email_input.send_keys(email)
+
+        password_input = self.browser.find_element(By.CSS_SELECTOR, "input[data-qa='login-password']")
+        password_input.click()
+        password_input.send_keys(password)
+
+        # 7. Click 'login' button
+        login_button = self.browser.find_element(By.CSS_SELECTOR, "button[data-qa='login-button']")
+        login_button.click()
+
+        # 8. Verify that 'Logged in as username' is visible
+        username = account_create_details.get("name")[1]
+        logged_in_info_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > header > div > div > div >"
+                                                                         " div:nth-of-type(2) > div > ul > li:nth-of-type(10) > a").text
+        logged_in_info_username = self.browser.find_element(By.CSS_SELECTOR, "html > body > header > div > div > div "
+                                                                             "> div:nth-of-type(2) > div > ul "
+                                                                             "> li:nth-of-type(10) > a > b").text
+        assert "Logged in as" in logged_in_info_text
+        assert logged_in_info_username == username
+
+        # 9. Click 'Logout' button
+        logout_button = self.browser.find_element(By.XPATH, "//a[@href='/logout']")
+        logout_button.click()
+
+        # 10. Verify that user is navigated to login page
+        current_url = self.browser.current_url
+        assert "login" in current_url
+
+        requests.delete("https://automationexercise.com/api/deleteAccount", files=account_delete_details)
 
     @pytest.mark.skip(reason="Not implemented yet")
     def test_register_user_existing_email(self):
