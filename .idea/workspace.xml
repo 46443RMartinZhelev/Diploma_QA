@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="added Test Case 7: Verify Test Cases Page">
+    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="added Test Case 8: Verify All Products and product detail page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
@@ -57,6 +57,7 @@
     "Python tests.pytest for test.TestWebsite.test_login_user_correct_email_password.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_logout_user.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_page_verification_all_products_details.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_page_verification_test_cases.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_register_user.executor": "Run",
     "Python tests.pytest for test.TestWebsite.test_register_user_existing_email.executor": "Run",
@@ -78,7 +79,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_page_verification_all_products_details">
+  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_search_product">
     <configuration name="Selenium Tests" type="tests" factoryName="py.test">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
@@ -93,23 +94,6 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;--html\u003dreports/test_report.html&quot;" />
       <option name="_new_target" value="&quot;test.TestWebsite&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test.TestWebsite.test_login_user_correct_email_password" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="Diploma_QA" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestWebsite.test_login_user_correct_email_password&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -181,18 +165,35 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest for test.TestWebsite.test_search_product" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Diploma_QA" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestWebsite.test_search_product&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test.TestWebsite.test_search_product" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_page_verification_all_products_details" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_page_verification_test_cases" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_register_user_existing_email" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_logout_user" />
-        <item itemvalue="Python tests.pytest for test.TestWebsite.test_login_user_correct_email_password" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
-    <option name="lastUrl" value="https://www.automationexercise.com/product_details/1" />
+    <option name="lastUrl" value="https://www.automationexercise.com/products?search=shirt" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -207,7 +208,7 @@
       <workItem from="1712407757929" duration="4108000" />
       <workItem from="1712412460209" duration="3335000" />
       <workItem from="1712477407534" duration="5939000" />
-      <workItem from="1712491148252" duration="1543000" />
+      <workItem from="1712491148252" duration="2396000" />
     </task>
     <task id="LOCAL-00001" summary="start - failing tests">
       <option name="closed" value="true" />
@@ -281,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712491885808</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added Test Case 8: Verify All Products and product detail page">
+      <option name="closed" value="true" />
+      <created>1712492747643</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712492747643</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +306,7 @@
     <MESSAGE value="added Test Case 4: Logout User" />
     <MESSAGE value="added Test Case 5: Register User with existing email" />
     <MESSAGE value="added Test Case 7: Verify Test Cases Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Test Case 7: Verify Test Cases Page" />
+    <MESSAGE value="added Test Case 8: Verify All Products and product detail page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Test Case 8: Verify All Products and product detail page" />
   </component>
 </project>

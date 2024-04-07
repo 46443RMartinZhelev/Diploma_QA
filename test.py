@@ -500,10 +500,39 @@ class TestWebsite:
         for element in visibility_list:
             assert element.is_displayed()
 
-    @pytest.mark.skip(reason="Not implemented yet")
     def test_search_product(self):
         """Test Case 9: Search Product"""
-        pass
+        # 3. Verify that home page is visible successfully
+        tab_title = self.browser.title
+
+        assert tab_title == "Automation Exercise"
+
+        # 4. Click on 'Products' button
+        products_button = self.browser.find_element(By.XPATH, "//a[@href='/products']")
+        products_button.click()
+
+        # 5. Verify user is navigated to ALL PRODUCTS page successfully
+        current_url = self.browser.current_url
+
+        assert "products" in current_url
+
+        # 6. Enter product name in search input and click search button
+        search_text = "shirt"
+        search_input = self.browser.find_element(By.XPATH, "//*[@id='search_product']")
+        search_button = self.browser.find_element(By.XPATH, "//*[@id='submit_search']")
+        search_input.click()
+        search_input.send_keys(search_text)
+        search_button.click()
+
+        # 7. Verify 'SEARCHED PRODUCTS' is visible
+        searched_products_text = self.browser.find_element(By.CSS_SELECTOR, "h2[class^='title']").text
+
+        assert searched_products_text == "SEARCHED PRODUCTS"
+
+        # 8. Verify all the products related to search are visible
+        products_list = self.browser.find_element(By.XPATH, "//div[@class='features_items']")
+
+        assert products_list.size != 0
 
     @pytest.mark.skip(reason="Not implemented yet")
     def test_verify_subscription_home_page(self):
