@@ -448,10 +448,57 @@ class TestWebsite:
 
         assert "test_cases" in current_url
 
-    @pytest.mark.skip(reason="Not implemented yet")
     def test_page_verification_all_products_details(self):
         """Test Case 8: Verify All Products and product detail page"""
-        pass
+        # 3. Verify that home page is visible successfully
+        tab_title = self.browser.title
+
+        assert tab_title == "Automation Exercise"
+
+        # 4. Click on 'Products' button
+        products_button = self.browser.find_element(By.XPATH, "//a[@href='/products']")
+        products_button.click()
+
+        # 5. Verify user is navigated to ALL PRODUCTS page successfully
+        current_url = self.browser.current_url
+
+        assert "products" in current_url
+
+        # 6. The products list is visible
+        products_list = self.browser.find_element(By.XPATH, "//div[@class='features_items']")
+
+        assert products_list.size != 0
+
+        # 7. Click on 'View Product' of first product
+        view_first_product_button = self.browser.find_element(By.XPATH, "//a[@href='/product_details/1']")
+        view_first_product_button.click()
+
+        # 8. User is landed to product detail page
+        current_url = self.browser.current_url
+
+        assert "product_details" in current_url
+
+        # 9. Verify that detail detail is visible: product name, category, price, availability, condition, brand
+        product_name_text = self.browser.find_element(By.CSS_SELECTOR, "div[class='product-information'] h2")
+        category_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > section > div > div >"
+                                                                   " div:nth-of-type(2) > div:nth-of-type(2) >"
+                                                                   " div:nth-of-type(2) > div > p:nth-of-type(1)")
+        price_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > section > div > div >"
+                                                                " div:nth-of-type(2) > div:nth-of-type(2) >"
+                                                                " div:nth-of-type(2) > div > span > span")
+        availability_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > section > div > div >"
+                                                                       " div:nth-of-type(2) > div:nth-of-type(2) >"
+                                                                       " div:nth-of-type(2) > div > p:nth-of-type(2)")
+        condition_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > section > div > div > "
+                                                                    "div:nth-of-type(2) > div:nth-of-type(2) > "
+                                                                    "div:nth-of-type(2) > div > p:nth-of-type(3)")
+        brand_text = self.browser.find_element(By.CSS_SELECTOR, "html > body > section > div > div >"
+                                                                " div:nth-of-type(2) > div:nth-of-type(2) >"
+                                                                " div:nth-of-type(2) > div > p:nth-of-type(4)")
+        visibility_list = [product_name_text, category_text, price_text, availability_text, condition_text, brand_text]
+
+        for element in visibility_list:
+            assert element.is_displayed()
 
     @pytest.mark.skip(reason="Not implemented yet")
     def test_search_product(self):
