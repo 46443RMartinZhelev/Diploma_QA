@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="Add skeleton for further UI tests">
+    <list default="true" id="792f5686-d2d5-443a-9336-180b16f98887" name="Changes" comment="added test case 3 Login User with incorrect email and password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
@@ -18,6 +18,7 @@
       <list>
         <option value="selenium-browsers" />
         <option value="selenium-test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -50,28 +51,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Selenium Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test.TestWebsite.test_register_user.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.pytest for test.TestWebsite.test_tools_menu.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Selenium Tests.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_login_user_correct_email_password.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_register_user.executor": "Run",
+    "Python tests.pytest for test.TestWebsite.test_tools_menu.executor": "Run",
+    "Python tests.pytest in test.py.executor": "Run",
+    "Python.raw.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password">
+}]]></component>
+  <component name="RunManager" selected="Python tests.pytest for test.TestWebsite.test_login_user_correct_email_password">
+    <configuration name="raw" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Diploma_QA" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/raw.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Selenium Tests" type="tests" factoryName="py.test">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
@@ -86,6 +112,23 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;--html\u003dreports/test_report.html&quot;" />
       <option name="_new_target" value="&quot;test.TestWebsite&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test.TestWebsite.test_login_user_correct_email_password" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Diploma_QA" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.TestWebsite.test_login_user_correct_email_password&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -123,7 +166,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test.TestWebsite.test_tools_menu" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest in test.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Diploma_QA" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,15 +179,17 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestWebsite.test_tools_menu&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest for test.TestWebsite.test_login_user_correct_email_password" />
+        <item itemvalue="Python tests.pytest in test.py" />
+        <item itemvalue="Python.raw" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_login_user_incorrect_email_password" />
         <item itemvalue="Python tests.pytest for test.TestWebsite.test_register_user" />
-        <item itemvalue="Python tests.pytest for test.TestWebsite.test_tools_menu" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +208,7 @@
       <workItem from="1712403348622" duration="338000" />
       <workItem from="1712407757929" duration="4108000" />
       <workItem from="1712412460209" duration="3335000" />
-      <workItem from="1712477407534" duration="495000" />
+      <workItem from="1712477407534" duration="4845000" />
     </task>
     <task id="LOCAL-00001" summary="start - failing tests">
       <option name="closed" value="true" />
@@ -197,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712415195744</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added test case 3 Login User with incorrect email and password">
+      <option name="closed" value="true" />
+      <created>1712477950211</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712477950211</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +261,7 @@
     <MESSAGE value="fix failing tests + remove unwanted configuration" />
     <MESSAGE value="Add Test Case 1: Register User" />
     <MESSAGE value="Add skeleton for further UI tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add skeleton for further UI tests" />
+    <MESSAGE value="added test case 3 Login User with incorrect email and password" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test case 3 Login User with incorrect email and password" />
   </component>
 </project>
